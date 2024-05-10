@@ -1,2 +1,2 @@
-minikube/configmap.yaml
-kind/configmap.yaml
+#minikube/configmap.yaml
+#kind/configmap.yaml
