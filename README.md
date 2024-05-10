@@ -49,12 +49,18 @@ Execute ***minikube status*** para verificar o status do cluster.
 
     Nginx:
     Kind:
-        Execute kubectl apply -f nginx.yaml para implantar o serviço Nginx.
+        Execute
+
+        kubectl apply -f deployment.yaml -f configmap.yaml para implantar o serviço Nginx.
 
     Minikube:
-        Execute - kubectl apply -f nginx.yaml para implantar o serviço Nginx.
+        Execute
 
-    Acesse o serviço Nginx em http://localhost:8080.
+        kubectl apply -f deployment.yaml -f configmap.yaml para implantar o serviço Nginx.
+
+    Acesse o serviço Nginx em http://192.168.49.2:31912.
+
+    31912 Seria o a porta do Node
 
     Traefik/Whoami:
 
