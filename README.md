@@ -1,3 +1,13 @@
+***Kubernetes Environment Setup***
+Este repositório contém os arquivos necessários para provisionar um ambiente Kubernetes local usando Kind ou Minikube, implementado com Terraform. Após a execução, você poderá acessar um "Hello World" usando Nginx ou Traefik/Whoami.
+
+**Pré-requisitos**
+Antes de começar, certifique-se de ter o seguinte instalado em sua máquina local:
+
+***Terraform***
+***Kind ou Minikube***
+***kubectl***
+
 **Este README fornece instruções claras sobre como executar o projeto e acessar o "Hello World" usando Nginx ou Traefik/Whoami. Se precisar de mais assistência, não hesite em entrar em contato!**
 
 **1 - Clone este repositório:**
