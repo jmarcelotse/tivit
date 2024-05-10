@@ -1,4 +1,5 @@
 name: Terraform Minikube Pipeline
+
 on:
   push:
     branches:
@@ -10,6 +11,7 @@ on:
 jobs:
   terraform:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -19,10 +21,11 @@ jobs:
           curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
           chmod +x minikube
           sudo mv minikube /usr/local/bin/
-          minikube config set driver docker
+          minikube config set driver docker --force
 
       - name: Start Minikube
-        run: minikube start --force
+        run: |
+          sudo minikube start --force
 
       - name: Install kubectl
         run: |
@@ -31,4 +34,5 @@ jobs:
           sudo mv ./kubectl /usr/local/bin/kubectl
 
       - name: Configure kubectl
-        run: minikube kubectl -- get po -A
+        run: |
+          minikube kubectl -- get po -A
