@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  APP_NAME: "Aplicacao Hello World"
+  APP_NAME: "Aplicacao Hello World Test"
   APP_VERSION: "1.0"
   APP_AUTHOR: "Jose Marcelo Tse"
