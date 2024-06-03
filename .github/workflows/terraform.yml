@@ -21,11 +21,11 @@ jobs:
           curl -Lo /tmp/minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
           chmod +x /tmp/minikube
           sudo mv /tmp/minikube /usr/local/bin/minikube
-          minikube config set driver docker --force
+          minikube config set driver docker
 
       - name: Start Minikube
         run: |
-          minikube start --force
+          minikube start
 
       - name: Install kubectl
         run: |
