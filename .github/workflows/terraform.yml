@@ -33,6 +33,12 @@ jobs:
           chmod +x /tmp/kubectl
           sudo mv /tmp/kubectl /usr/local/bin/kubectl
 
+      - name: Install kind
+        run: |
+          curl -Lo /tmp/kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64
+          chmod +x /tmp/kind
+          sudo mv /tmp/kind /usr/local/bin/kind
+
       - name: Configure kubectl
         run: |
           minikube kubectl -- get po -A
